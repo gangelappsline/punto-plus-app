@@ -76,6 +76,9 @@ jobs:
     name: Android debug APK
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -84,4 +87,22 @@ jobs:
           cache: true
       - run: flutter pub get
       - name: Compilar APK de depuración
-        run: flutter build apk --debug
+        id: apk
+        continue-on-error: true
+        run: flutter build apk --debug 2>&1 | tee apk.txt
+      - name: Publicar resultado de la compilación
+        if: steps.apk.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### Compilación Android fallida (${{ github.sha }})"
+            echo
+            echo '```'
+            tail -c 30000 apk.txt || true
+            echo '```'
+          } > apk-resultado.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file apk-resultado.md || true
+      - name: Fallar si el APK no se compiló
+        if: steps.apk.outcome == 'failure'
+        run: exit 1

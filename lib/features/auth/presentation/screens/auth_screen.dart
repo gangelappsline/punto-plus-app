@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/providers/app_providers.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/extensions.dart';
 import '../controllers/auth_state.dart';
 import '../widgets/auth_segmented_control.dart';
 import '../widgets/brand_header.dart';
@@ -11,20 +12,24 @@ import '../widgets/register_card.dart';
 import '../widgets/social_section.dart';
 
 final class AuthScreen extends ConsumerStatefulWidget {
-  const AuthScreen({super.key});
+  const AuthScreen({this.initialMode = AuthMode.login, super.key});
+
+  /// Pestaña que se muestra al abrir (`/login` o `/register`).
+  final AuthMode initialMode;
 
   @override
   ConsumerState<AuthScreen> createState() => _AuthScreenState();
 }
 
 final class _AuthScreenState extends ConsumerState<AuthScreen> {
-  AuthMode _mode = AuthMode.login;
+  late AuthMode _mode = widget.initialMode;
 
-  void _showSocialSetup(String provider) {
+  void _showSocialSetup(String? provider) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          'Configura las credenciales de $provider para habilitar este acceso.',
+          context.l10n
+              .authSocialNotConfigured(provider ?? ''),
         ),
       ),
     );
@@ -37,7 +42,12 @@ final class _AuthScreenState extends ConsumerState<AuthScreen> {
       if (message != null && message != previous?.errorMessage) {
         ScaffoldMessenger.of(context)
           ..hideCurrentSnackBar()
-          ..showSnackBar(SnackBar(content: Text(message)));
+          ..showSnackBar(
+            SnackBar(
+              content: Text(context.localizeError(message)),
+              backgroundColor: context.palette.error,
+            ),
+          );
       }
     });
 

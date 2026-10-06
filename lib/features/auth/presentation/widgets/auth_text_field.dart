@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/extensions.dart';
 
 final class AuthTextField extends StatelessWidget {
   const AuthTextField({
@@ -112,8 +113,8 @@ final class AuthTextField extends StatelessWidget {
                   ? null
                   : IconButton(
                       tooltip: obscureText
-                          ? 'Mostrar contraseña'
-                          : 'Ocultar contraseña',
+                          ? context.l10n.authShowPassword
+                          : context.l10n.authHidePassword,
                       onPressed: onToggleObscure,
                       icon: Icon(
                         obscureText

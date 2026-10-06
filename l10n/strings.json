@@ -1,0 +1,2272 @@
+{
+  "app": {
+    "name": {
+      "es": "Punto+",
+      "en": "Punto+"
+    },
+    "tagline": {
+      "es": "Tus recompensas, siempre contigo",
+      "en": "Your rewards, always with you"
+    }
+  },
+  "common": {
+    "continue_action": {
+      "es": "Continuar",
+      "en": "Continue"
+    },
+    "retry": {
+      "es": "Reintentar",
+      "en": "Retry"
+    },
+    "cancel": {
+      "es": "Cancelar",
+      "en": "Cancel"
+    },
+    "accept": {
+      "es": "Aceptar",
+      "en": "Accept"
+    },
+    "save": {
+      "es": "Guardar",
+      "en": "Save"
+    },
+    "saving": {
+      "es": "Guardando…",
+      "en": "Saving…"
+    },
+    "delete": {
+      "es": "Eliminar",
+      "en": "Delete"
+    },
+    "edit": {
+      "es": "Editar",
+      "en": "Edit"
+    },
+    "close": {
+      "es": "Cerrar",
+      "en": "Close"
+    },
+    "back": {
+      "es": "Volver",
+      "en": "Back"
+    },
+    "search": {
+      "es": "Buscar",
+      "en": "Search"
+    },
+    "loading": {
+      "es": "Cargando…",
+      "en": "Loading…"
+    },
+    "all": {
+      "es": "Todos",
+      "en": "All"
+    },
+    "share": {
+      "es": "Compartir",
+      "en": "Share"
+    },
+    "copy": {
+      "es": "Copiar",
+      "en": "Copy"
+    },
+    "copied": {
+      "es": "Copiado al portapapeles",
+      "en": "Copied to clipboard"
+    },
+    "apply": {
+      "es": "Aplicar",
+      "en": "Apply"
+    },
+    "clear": {
+      "es": "Limpiar",
+      "en": "Clear"
+    },
+    "filters": {
+      "es": "Filtros",
+      "en": "Filters"
+    },
+    "see_all": {
+      "es": "Ver todo",
+      "en": "See all"
+    },
+    "see_detail": {
+      "es": "Ver detalle",
+      "en": "View details"
+    },
+    "coming_soon": {
+      "es": "Muy pronto",
+      "en": "Coming soon"
+    },
+    "offline_banner": {
+      "es": "Sin conexión: mostrando datos guardados",
+      "en": "Offline: showing cached data"
+    },
+    "optional": {
+      "es": "Opcional",
+      "en": "Optional"
+    },
+    "new_badge": {
+      "es": "Nuevo",
+      "en": "New"
+    },
+    "yes": {
+      "es": "Sí",
+      "en": "Yes"
+    },
+    "no": {
+      "es": "No",
+      "en": "No"
+    },
+    "ok": {
+      "es": "Entendido",
+      "en": "Got it"
+    },
+    "empty_generic_title": {
+      "es": "Nada por aquí",
+      "en": "Nothing here"
+    },
+    "empty_generic_message": {
+      "es": "Cuando haya información disponible la verás en esta pantalla.",
+      "en": "When there is information available you will see it here."
+    },
+    "error_generic_title": {
+      "es": "Algo salió mal",
+      "en": "Something went wrong"
+    },
+    "error_generic_message": {
+      "es": "No pudimos completar la operación. Inténtalo de nuevo.",
+      "en": "We could not complete the operation. Please try again."
+    },
+    "tab_home": {
+      "es": "Inicio",
+      "en": "Home"
+    },
+    "tab_map": {
+      "es": "Mapa",
+      "en": "Map"
+    },
+    "tab_rewards": {
+      "es": "Premios",
+      "en": "Rewards"
+    },
+    "tab_promotions": {
+      "es": "Promos",
+      "en": "Promos"
+    },
+    "tab_profile": {
+      "es": "Perfil",
+      "en": "Profile"
+    },
+    "stamps_count": {
+      "es": "{count} sellos",
+      "en": "{count} stamps"
+    },
+    "points_count": {
+      "es": "{count} pts",
+      "en": "{count} pts"
+    },
+    "km_away": {
+      "es": "a {distance} km",
+      "en": "{distance} km away"
+    },
+    "list_view": {
+      "es": "Lista",
+      "en": "List"
+    },
+    "map_view": {
+      "es": "Mapa",
+      "en": "Map"
+    },
+    "required_indicator": {
+      "es": "Obligatorio",
+      "en": "Required"
+    }
+  },
+  "time": {
+    "just_now": {
+      "es": "Hace un momento",
+      "en": "Just now"
+    },
+    "minutes_ago": {
+      "es": "Hace {minutes} min",
+      "en": "{minutes} min ago"
+    },
+    "hours_ago": {
+      "es": "Hace {hours} h",
+      "en": "{hours} h ago"
+    },
+    "days_ago": {
+      "es": "Hace {days} días",
+      "en": "{days} days ago"
+    },
+    "weeks_ago": {
+      "es": "Hace {weeks} semanas",
+      "en": "{weeks} weeks ago"
+    },
+    "today": {
+      "es": "Hoy",
+      "en": "Today"
+    },
+    "yesterday": {
+      "es": "Ayer",
+      "en": "Yesterday"
+    }
+  },
+  "validation": {
+    "required": {
+      "es": "Campo obligatorio",
+      "en": "Required field"
+    },
+    "name_short": {
+      "es": "Escribe tu nombre completo",
+      "en": "Enter your full name"
+    },
+    "email_invalid": {
+      "es": "Correo no válido",
+      "en": "Invalid email"
+    },
+    "phone_invalid": {
+      "es": "Celular no válido",
+      "en": "Invalid phone number"
+    },
+    "email_or_phone_invalid": {
+      "es": "Ingresa un correo o celular válido",
+      "en": "Enter a valid email or phone number"
+    },
+    "password_short": {
+      "es": "Usa al menos 8 caracteres",
+      "en": "Use at least 8 characters"
+    },
+    "password_mismatch": {
+      "es": "Las contraseñas no coinciden",
+      "en": "Passwords do not match"
+    },
+    "otp_six_digits": {
+      "es": "Ingresa los 6 dígitos",
+      "en": "Enter the 6 digits"
+    },
+    "terms_required": {
+      "es": "Debes aceptar los términos y la política de privacidad",
+      "en": "You must accept the terms and privacy policy"
+    },
+    "code_invalid": {
+      "es": "Código no válido",
+      "en": "Invalid code"
+    },
+    "numeric_invalid": {
+      "es": "Ingresa solo números",
+      "en": "Enter numbers only"
+    },
+    "url_invalid": {
+      "es": "Enlace no válido",
+      "en": "Invalid link"
+    },
+    "too_long": {
+      "es": "Máximo {max} caracteres",
+      "en": "Maximum {max} characters"
+    },
+    "number_range": {
+      "es": "Ingresa un valor entre {min} y {max}",
+      "en": "Enter a value between {min} and {max}"
+    },
+    "date_order": {
+      "es": "La fecha final debe ser posterior a la inicial",
+      "en": "The end date must be after the start date"
+    }
+  },
+  "onboarding": {
+    "skip": {
+      "es": "Omitir",
+      "en": "Skip"
+    },
+    "next": {
+      "es": "Siguiente",
+      "en": "Next"
+    },
+    "start": {
+      "es": "Comenzar",
+      "en": "Get started"
+    },
+    "slide_1_title": {
+      "es": "Acumula sellos sin tarjetas de papel",
+      "en": "Collect stamps without paper cards"
+    },
+    "slide_1_message": {
+      "es": "Muestra tu código QR en cada visita y suma sellos al instante.",
+      "en": "Show your QR code on every visit and add stamps instantly."
+    },
+    "slide_2_title": {
+      "es": "Descubre negocios cerca de ti",
+      "en": "Discover businesses near you"
+    },
+    "slide_2_message": {
+      "es": "Explora el mapa, encuentra promociones y guarda tus favoritos.",
+      "en": "Explore the map, find promotions and save your favorites."
+    },
+    "slide_3_title": {
+      "es": "Canjea recompensas reales",
+      "en": "Redeem real rewards"
+    },
+    "slide_3_message": {
+      "es": "Al completar tu tarjeta desbloqueas premios que puedes canjear al momento.",
+      "en": "Completing your card unlocks rewards you can redeem right away."
+    },
+    "slide_4_title": {
+      "es": "Para negocios, todo en un panel",
+      "en": "For businesses, everything in one panel"
+    },
+    "slide_4_message": {
+      "es": "Escanea QR, crea tarjetas a tu medida y revisa tus métricas.",
+      "en": "Scan QRs, build custom cards and review your metrics."
+    }
+  },
+  "auth": {
+    "welcome_title": {
+      "es": "Bienvenido a Punto+",
+      "en": "Welcome to Punto+"
+    },
+    "welcome_subtitle": {
+      "es": "Tu billetera de recompensas para negocios locales.",
+      "en": "Your rewards wallet for local businesses."
+    },
+    "welcome_login": {
+      "es": "Iniciar sesión",
+      "en": "Log in"
+    },
+    "welcome_register": {
+      "es": "Crear cuenta",
+      "en": "Create account"
+    },
+    "welcome_benefit_1": {
+      "es": "Todas tus tarjetas en un solo lugar",
+      "en": "All your cards in one place"
+    },
+    "welcome_benefit_2": {
+      "es": "Promociones exclusivas de tus favoritos",
+      "en": "Exclusive promotions from your favorites"
+    },
+    "welcome_benefit_3": {
+      "es": "Sin papeles, sin perder sellos",
+      "en": "No paper, no lost stamps"
+    },
+    "login_title": {
+      "es": "Bienvenido de vuelta",
+      "en": "Welcome back"
+    },
+    "login_subtitle": {
+      "es": "Ingresa con el correo o celular de tu cuenta.",
+      "en": "Sign in with your account email or phone."
+    },
+    "register_title": {
+      "es": "Crea tu cuenta",
+      "en": "Create your account"
+    },
+    "register_subtitle": {
+      "es": "Elige tu tipo de cuenta para empezar.",
+      "en": "Choose your account type to get started."
+    },
+    "email_label": {
+      "es": "Correo electrónico",
+      "en": "Email address"
+    },
+    "email_hint": {
+      "es": "tu@correo.com",
+      "en": "you@email.com"
+    },
+    "phone_label": {
+      "es": "Celular",
+      "en": "Phone"
+    },
+    "phone_hint": {
+      "es": "55 1234 5678",
+      "en": "555 123 4567"
+    },
+    "name_label": {
+      "es": "Nombre completo",
+      "en": "Full name"
+    },
+    "name_hint": {
+      "es": "Ana Pérez",
+      "en": "Ana Perez"
+    },
+    "password_label": {
+      "es": "Contraseña",
+      "en": "Password"
+    },
+    "password_hint": {
+      "es": "Mínimo 8 caracteres",
+      "en": "At least 8 characters"
+    },
+    "remember_me": {
+      "es": "Recordarme",
+      "en": "Remember me"
+    },
+    "forgot_password": {
+      "es": "¿Olvidaste tu contraseña?",
+      "en": "Forgot your password?"
+    },
+    "login_action": {
+      "es": "Continuar",
+      "en": "Continue"
+    },
+    "register_action": {
+      "es": "Registrarme",
+      "en": "Sign up"
+    },
+    "role_label": {
+      "es": "Tipo de cuenta",
+      "en": "Account type"
+    },
+    "role_customer": {
+      "es": "Cliente",
+      "en": "Customer"
+    },
+    "role_customer_description": {
+      "es": "Acumula sellos y canjea recompensas",
+      "en": "Collect stamps and redeem rewards"
+    },
+    "role_business": {
+      "es": "Negocio",
+      "en": "Business"
+    },
+    "role_business_description": {
+      "es": "Escanea QR y gestiona tu programa",
+      "en": "Scan QRs and manage your program"
+    },
+    "accept_terms_prefix": {
+      "es": "Acepto los",
+      "en": "I accept the"
+    },
+    "accept_terms": {
+      "es": "términos y condiciones",
+      "en": "terms and conditions"
+    },
+    "accept_privacy_prefix": {
+      "es": "y la",
+      "en": "and the"
+    },
+    "accept_privacy": {
+      "es": "política de privacidad",
+      "en": "privacy policy"
+    },
+    "social_google": {
+      "es": "Google",
+      "en": "Google"
+    },
+    "social_apple": {
+      "es": "Apple ID",
+      "en": "Apple ID"
+    },
+    "social_divider": {
+      "es": "o continúa con",
+      "en": "or continue with"
+    },
+    "social_setup_message": {
+      "es": "Configura las credenciales de {provider} para habilitar este acceso.",
+      "en": "Configure {provider} credentials to enable this sign-in method."
+    },
+    "logout": {
+      "es": "Cerrar sesión",
+      "en": "Log out"
+    },
+    "logout_confirm_title": {
+      "es": "¿Cerrar sesión?",
+      "en": "Log out?"
+    },
+    "logout_confirm_message": {
+      "es": "Tendrás que ingresar tus datos nuevamente.",
+      "en": "You will need to sign in again."
+    },
+    "verify_title": {
+      "es": "Verifica tu cuenta",
+      "en": "Verify your account"
+    },
+    "verify_subtitle": {
+      "es": "Enviamos un código de 6 dígitos a {destination}.",
+      "en": "We sent a 6 digit code to {destination}."
+    },
+    "verify_action": {
+      "es": "Verificar",
+      "en": "Verify"
+    },
+    "verify_resend_action": {
+      "es": "Reenviar código",
+      "en": "Resend code"
+    },
+    "verify_resend_in": {
+      "es": "Reenviar en {seconds}s",
+      "en": "Resend in {seconds}s"
+    },
+    "verify_resend_success": {
+      "es": "Te enviamos un código nuevo.",
+      "en": "We sent you a new code."
+    },
+    "verify_success": {
+      "es": "¡Tu cuenta está verificada!",
+      "en": "Your account is verified!"
+    },
+    "verify_invalid": {
+      "es": "El código es incorrecto o ya expiró.",
+      "en": "The code is incorrect or has expired."
+    },
+    "verify_change_destination": {
+      "es": "Cambiar correo o celular",
+      "en": "Change email or phone"
+    },
+    "otp_label": {
+      "es": "Código de verificación",
+      "en": "Verification code"
+    },
+    "forgot_title": {
+      "es": "Recupera tu acceso",
+      "en": "Recover your access"
+    },
+    "forgot_subtitle": {
+      "es": "Te enviaremos un código para restablecer tu contraseña.",
+      "en": "We will send you a code to reset your password."
+    },
+    "forgot_action": {
+      "es": "Enviar código",
+      "en": "Send code"
+    },
+    "forgot_success": {
+      "es": "Revisa tu correo: enviamos un código de recuperación.",
+      "en": "Check your email: we sent a recovery code."
+    },
+    "reset_title": {
+      "es": "Nueva contraseña",
+      "en": "New password"
+    },
+    "reset_subtitle": {
+      "es": "Ingresa el código recibido y elige una contraseña nueva.",
+      "en": "Enter the code you received and choose a new password."
+    },
+    "reset_action": {
+      "es": "Actualizar contraseña",
+      "en": "Update password"
+    },
+    "reset_success": {
+      "es": "Tu contraseña se actualizó. Inicia sesión de nuevo.",
+      "en": "Your password was updated. Please log in again."
+    },
+    "reset_code_label": {
+      "es": "Código recibido",
+      "en": "Received code"
+    },
+    "reset_new_password_label": {
+      "es": "Nueva contraseña",
+      "en": "New password"
+    },
+    "reset_confirm_password_label": {
+      "es": "Repite la contraseña",
+      "en": "Repeat password"
+    },
+    "back_to_login": {
+      "es": "Volver al inicio de sesión",
+      "en": "Back to log in"
+    },
+    "session_expired": {
+      "es": "Tu sesión expiró. Ingresa de nuevo.",
+      "en": "Your session expired. Please sign in again."
+    },
+    "account_pending_verification": {
+      "es": "Verifica tu cuenta para continuar.",
+      "en": "Verify your account to continue."
+    },
+    "social_not_configured": {
+      "es": "Configura las credenciales de {provider} para habilitar este acceso.",
+      "en": "Set the {provider} credentials to enable this sign-in."
+    },
+    "show_password": {
+      "es": "Mostrar contraseña",
+      "en": "Show password"
+    },
+    "hide_password": {
+      "es": "Ocultar contraseña",
+      "en": "Hide password"
+    }
+  },
+  "home": {
+    "greeting": {
+      "es": "¡Hola, {name}!",
+      "en": "Hi, {name}!"
+    },
+    "greeting_no_name": {
+      "es": "¡Hola!",
+      "en": "Hi there!"
+    },
+    "subtitle": {
+      "es": "Este es el resumen de tus recompensas.",
+      "en": "Here is your rewards summary."
+    },
+    "points_card_title": {
+      "es": "Puntos Punto+",
+      "en": "Punto+ points"
+    },
+    "points_card_subtitle": {
+      "es": "Canjeables en promociones participantes",
+      "en": "Redeemable in participating promotions"
+    },
+    "stats_cards": {
+      "es": "Tarjetas activas",
+      "en": "Active cards"
+    },
+    "stats_completed": {
+      "es": "Completadas",
+      "en": "Completed"
+    },
+    "stats_stamps": {
+      "es": "Sellos totales",
+      "en": "Total stamps"
+    },
+    "quick_join_card": {
+      "es": "Unirme a una tarjeta",
+      "en": "Join a card"
+    },
+    "quick_join_card_hint": {
+      "es": "Escanea el QR del negocio o escribe el código",
+      "en": "Scan the business QR or type the code"
+    },
+    "quick_nearby": {
+      "es": "Negocios cerca",
+      "en": "Nearby businesses"
+    },
+    "quick_rewards": {
+      "es": "Mis premios",
+      "en": "My rewards"
+    },
+    "quick_promotions": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "quick_referral": {
+      "es": "Invita y gana",
+      "en": "Invite and earn"
+    },
+    "my_cards_title": {
+      "es": "Mis tarjetas",
+      "en": "My cards"
+    },
+    "no_cards_title": {
+      "es": "Aún no tienes tarjetas",
+      "en": "You do not have cards yet"
+    },
+    "no_cards_message": {
+      "es": "Únete a una tarjeta con el código QR del negocio y empieza a acumular sellos.",
+      "en": "Join a card with a business QR code and start collecting stamps."
+    },
+    "nearby_title": {
+      "es": "Cerca de ti",
+      "en": "Near you"
+    },
+    "promotions_title": {
+      "es": "Promociones activas",
+      "en": "Active promotions"
+    },
+    "completed_banner": {
+      "es": "¡Tienes premios listos!",
+      "en": "You have rewards ready!"
+    },
+    "completed_banner_message": {
+      "es": "Completa una tarjeta y canjea tu recompensa cuando quieras.",
+      "en": "Complete a card and redeem your reward whenever you want."
+    }
+  },
+  "cards": {
+    "title": {
+      "es": "Mis tarjetas",
+      "en": "My cards"
+    },
+    "subtitle": {
+      "es": "Toca una tarjeta para ver tus sellos y tu QR.",
+      "en": "Tap a card to see your stamps and QR."
+    },
+    "progress": {
+      "es": "{current} de {total} sellos",
+      "en": "{current} of {total} stamps"
+    },
+    "remaining": {
+      "es": "Te faltan {count} sellos",
+      "en": "{count} stamps to go"
+    },
+    "completed_badge": {
+      "es": "¡Completa!",
+      "en": "Completed!"
+    },
+    "ready_badge": {
+      "es": "Premio listo",
+      "en": "Reward ready"
+    },
+    "reward_label": {
+      "es": "Recompensa",
+      "en": "Reward"
+    },
+    "show_qr_action": {
+      "es": "Mostrar mi QR",
+      "en": "Show my QR"
+    },
+    "detail_title": {
+      "es": "Detalle de la tarjeta",
+      "en": "Card details"
+    },
+    "stamps_title": {
+      "es": "Tus sellos",
+      "en": "Your stamps"
+    },
+    "history_title": {
+      "es": "Historial de sellos",
+      "en": "Stamp history"
+    },
+    "history_empty": {
+      "es": "Todavía no registras sellos en esta tarjeta.",
+      "en": "You have no stamps on this card yet."
+    },
+    "completed_on": {
+      "es": "Completada el {date}",
+      "en": "Completed on {date}"
+    },
+    "expires_on": {
+      "es": "Vence el {date}",
+      "en": "Expires on {date}"
+    },
+    "inactive": {
+      "es": "Tarjeta pausada",
+      "en": "Card paused"
+    },
+    "rules_title": {
+      "es": "Cómo funciona",
+      "en": "How it works"
+    },
+    "rules_message": {
+      "es": "Acumula {stamps} sellos mostrando tu QR en cada compra y canjea tu premio.",
+      "en": "Collect {stamps} stamps by showing your QR on each purchase and redeem your reward."
+    },
+    "empty_title": {
+      "es": "Sin tarjetas todavía",
+      "en": "No cards yet"
+    },
+    "empty_message": {
+      "es": "Únete a tu primera tarjeta con el código del negocio.",
+      "en": "Join your first card with a business code."
+    },
+    "join_title": {
+      "es": "Unirme a una tarjeta",
+      "en": "Join a card"
+    },
+    "join_action": {
+      "es": "Unirme",
+      "en": "Join"
+    },
+    "join_code_label": {
+      "es": "Código o QR del negocio",
+      "en": "Business code or QR"
+    },
+    "join_code_hint": {
+      "es": "Ej. PP-5F3A9C o el contenido del QR",
+      "en": "E.g. PP-5F3A9C or the QR content"
+    },
+    "join_help": {
+      "es": "Pide el código al personal del negocio o escanea su QR.",
+      "en": "Ask the business staff for the code or scan their QR."
+    },
+    "join_success": {
+      "es": "¡Listo! Te uniste a {business}.",
+      "en": "Done! You joined {business}."
+    },
+    "join_already_member": {
+      "es": "Ya tienes esta tarjeta en tu lista.",
+      "en": "You already have this card in your list."
+    },
+    "join_error": {
+      "es": "No pudimos validar el código. Revísalo e inténtalo de nuevo.",
+      "en": "We could not validate the code. Check it and try again."
+    },
+    "detail_error": {
+      "es": "No pudimos cargar esta tarjeta.",
+      "en": "We could not load this card."
+    },
+    "stamp_added_at": {
+      "es": "Sello del {date}",
+      "en": "Stamp on {date}"
+    },
+    "join_code_required": {
+      "es": "Ingresa el código del negocio.",
+      "en": "Enter the business code."
+    }
+  },
+  "qr": {
+    "title": {
+      "es": "Tu código QR",
+      "en": "Your QR code"
+    },
+    "subtitle": {
+      "es": "Muéstralo en {business} para sumar un sello.",
+      "en": "Show it at {business} to add a stamp."
+    },
+    "expires_in": {
+      "es": "Vence en {seconds}s",
+      "en": "Expires in {seconds}s"
+    },
+    "expires_at": {
+      "es": "Válido hasta {time}",
+      "en": "Valid until {time}"
+    },
+    "expired_title": {
+      "es": "Tu código expiró",
+      "en": "Your code expired"
+    },
+    "expired_message": {
+      "es": "Genera uno nuevo para seguir acumulando.",
+      "en": "Generate a new one to keep collecting."
+    },
+    "regenerate_action": {
+      "es": "Generar nuevo código",
+      "en": "Generate new code"
+    },
+    "instruction": {
+      "es": "Pide al personal que escanee este código",
+      "en": "Ask the staff to scan this code"
+    },
+    "brightness_hint": {
+      "es": "Aumentamos el brillo de tu pantalla al máximo.",
+      "en": "We set your screen brightness to maximum."
+    },
+    "brightness_unavailable": {
+      "es": "Sube el brillo de tu pantalla para un escaneo más rápido.",
+      "en": "Turn up your screen brightness for a faster scan."
+    },
+    "code_label": {
+      "es": "Código manual",
+      "en": "Manual code"
+    },
+    "share_code": {
+      "es": "Compartir código",
+      "en": "Share code"
+    },
+    "error": {
+      "es": "No pudimos generar tu código. Inténtalo de nuevo.",
+      "en": "We could not generate your code. Please try again."
+    },
+    "camera_unavailable": {
+      "es": "El escaneo con cámara requiere el plugin de escaneo.",
+      "en": "Camera scanning requires the scanner plugin."
+    }
+  },
+  "map": {
+    "title": {
+      "es": "Mapa de negocios",
+      "en": "Business map"
+    },
+    "search_hint": {
+      "es": "Buscar negocio o categoría",
+      "en": "Search business or category"
+    },
+    "radius_label": {
+      "es": "Radio",
+      "en": "Radius"
+    },
+    "radius_value": {
+      "es": "{km} km",
+      "en": "{km} km"
+    },
+    "my_location": {
+      "es": "Mi ubicación",
+      "en": "My location"
+    },
+    "location_denied_title": {
+      "es": "Sin acceso a tu ubicación",
+      "en": "No location access"
+    },
+    "location_denied_message": {
+      "es": "Puedes activar el permiso en los ajustes del sistema o elegir una zona manualmente.",
+      "en": "You can enable the permission in system settings or pick an area manually."
+    },
+    "open_settings": {
+      "es": "Abrir ajustes",
+      "en": "Open settings"
+    },
+    "manual_location": {
+      "es": "Elegir zona",
+      "en": "Pick area"
+    },
+    "manual_location_hint": {
+      "es": "Ciudad o colonia",
+      "en": "City or neighborhood"
+    },
+    "manual_location_saved": {
+      "es": "Usando la zona {area} como referencia.",
+      "en": "Using {area} as reference."
+    },
+    "empty_title": {
+      "es": "Sin negocios en este radio",
+      "en": "No businesses in this radius"
+    },
+    "empty_message": {
+      "es": "Prueba con un radio mayor o mueve el mapa a otra zona.",
+      "en": "Try a wider radius or move the map to another area."
+    },
+    "error": {
+      "es": "No pudimos cargar los negocios cercanos.",
+      "en": "We could not load nearby businesses."
+    },
+    "you_are_here": {
+      "es": "Estás aquí",
+      "en": "You are here"
+    },
+    "businesses_found": {
+      "es": "{count} negocios",
+      "en": "{count} businesses"
+    },
+    "categories": {
+      "es": "Categorías",
+      "en": "Categories"
+    },
+    "category_all": {
+      "es": "Todos",
+      "en": "All"
+    },
+    "static_view_hint": {
+      "es": "Vista esquemática. Conecta Google Maps para el mapa completo.",
+      "en": "Schematic view. Connect Google Maps for the full map."
+    },
+    "favorites_only": {
+      "es": "Solo favoritos",
+      "en": "Favorites only"
+    }
+  },
+  "business": {
+    "about_title": {
+      "es": "Acerca del negocio",
+      "en": "About the business"
+    },
+    "address": {
+      "es": "Dirección",
+      "en": "Address"
+    },
+    "phone": {
+      "es": "Teléfono",
+      "en": "Phone"
+    },
+    "hours": {
+      "es": "Horario",
+      "en": "Opening hours"
+    },
+    "cards_title": {
+      "es": "Tarjetas disponibles",
+      "en": "Available cards"
+    },
+    "promotions_title": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "open_now": {
+      "es": "Abierto ahora",
+      "en": "Open now"
+    },
+    "closed_now": {
+      "es": "Cerrado",
+      "en": "Closed"
+    },
+    "call_action": {
+      "es": "Llamar",
+      "en": "Call"
+    },
+    "directions_action": {
+      "es": "Cómo llegar",
+      "en": "Directions"
+    },
+    "favorite_add": {
+      "es": "Guardar en favoritos",
+      "en": "Save to favorites"
+    },
+    "favorite_remove": {
+      "es": "Quitar de favoritos",
+      "en": "Remove from favorites"
+    },
+    "not_found_title": {
+      "es": "Negocio no encontrado",
+      "en": "Business not found"
+    },
+    "not_found_message": {
+      "es": "El negocio que buscas ya no está disponible.",
+      "en": "The business you are looking for is no longer available."
+    },
+    "error": {
+      "es": "No pudimos cargar el negocio.",
+      "en": "We could not load the business."
+    },
+    "joined": {
+      "es": "Ya tienes esta tarjeta",
+      "en": "You already have this card"
+    },
+    "join_action": {
+      "es": "Unirme a esta tarjeta",
+      "en": "Join this card"
+    },
+    "gallery": {
+      "es": "Galería",
+      "en": "Gallery"
+    },
+    "distance_label": {
+      "es": "A {distance} km",
+      "en": "{distance} km away"
+    },
+    "schedule_unavailable": {
+      "es": "Horario disponible en el negocio",
+      "en": "Schedule available at the business"
+    },
+    "share_action": {
+      "es": "Compartir negocio",
+      "en": "Share business"
+    },
+    "gallery_title": {
+      "es": "Galería",
+      "en": "Gallery"
+    },
+    "directions_hint": {
+      "es": "Se abrirá la app de mapas con la ruta al negocio.",
+      "en": "Your maps app will open with directions to the business."
+    }
+  },
+  "rewards": {
+    "title": {
+      "es": "Mis premios",
+      "en": "My rewards"
+    },
+    "tab_available": {
+      "es": "Disponibles",
+      "en": "Available"
+    },
+    "tab_redeemed": {
+      "es": "Canjeados",
+      "en": "Redeemed"
+    },
+    "tab_expired": {
+      "es": "Expirados",
+      "en": "Expired"
+    },
+    "detail_title": {
+      "es": "Detalle del premio",
+      "en": "Reward details"
+    },
+    "redeem_action": {
+      "es": "Canjear premio",
+      "en": "Redeem reward"
+    },
+    "redeem_confirm_title": {
+      "es": "¿Canjear este premio?",
+      "en": "Redeem this reward?"
+    },
+    "redeem_confirm_message": {
+      "es": "Muestra el código de canje al personal del negocio para confirmarlo.",
+      "en": "Show the redemption code to the business staff to confirm it."
+    },
+    "redeem_confirm_action": {
+      "es": "Sí, canjear",
+      "en": "Yes, redeem"
+    },
+    "redeem_success": {
+      "es": "¡Premio canjeado! Muestra el código al negocio.",
+      "en": "Reward redeemed! Show the code to the business."
+    },
+    "redeem_error": {
+      "es": "No pudimos canjear el premio.",
+      "en": "We could not redeem the reward."
+    },
+    "status_available": {
+      "es": "Disponible",
+      "en": "Available"
+    },
+    "status_redeemed": {
+      "es": "Canjeado",
+      "en": "Redeemed"
+    },
+    "status_expired": {
+      "es": "Expirado",
+      "en": "Expired"
+    },
+    "expires_on": {
+      "es": "Vence el {date}",
+      "en": "Expires on {date}"
+    },
+    "redeemed_at": {
+      "es": "Canjeado el {date}",
+      "en": "Redeemed on {date}"
+    },
+    "requires_stamps": {
+      "es": "Requiere completar {count} sellos",
+      "en": "Requires completing {count} stamps"
+    },
+    "empty_available_title": {
+      "es": "Aún no tienes premios",
+      "en": "No rewards yet"
+    },
+    "empty_available_message": {
+      "es": "Completa una tarjeta para desbloquear tu primer premio.",
+      "en": "Complete a card to unlock your first reward."
+    },
+    "empty_redeemed_title": {
+      "es": "Sin canjes todavía",
+      "en": "No redemptions yet"
+    },
+    "empty_redeemed_message": {
+      "es": "Cuando canjees un premio verás aquí el historial.",
+      "en": "Once you redeem a reward you will see it here."
+    },
+    "empty_expired_title": {
+      "es": "Nada por expirar",
+      "en": "Nothing expired"
+    },
+    "empty_expired_message": {
+      "es": "Los premios vencidos aparecerán en esta pestaña.",
+      "en": "Expired rewards will appear in this tab."
+    },
+    "code_label": {
+      "es": "Código de canje",
+      "en": "Redemption code"
+    }
+  },
+  "promotions": {
+    "title": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "subtitle": {
+      "es": "Beneficios activos de los negocios que sigues.",
+      "en": "Active benefits from the businesses you follow."
+    },
+    "valid_until": {
+      "es": "Válida hasta {date}",
+      "en": "Valid until {date}"
+    },
+    "starts_on": {
+      "es": "Desde {date}",
+      "en": "From {date}"
+    },
+    "empty_title": {
+      "es": "Sin promociones activas",
+      "en": "No active promotions"
+    },
+    "empty_message": {
+      "es": "Cuando tus negocios favoritos publiquen promociones las verás aquí.",
+      "en": "When your favorite businesses publish promotions you will see them here."
+    },
+    "error": {
+      "es": "No pudimos cargar las promociones.",
+      "en": "We could not load promotions."
+    },
+    "detail_title": {
+      "es": "Detalle de la promoción",
+      "en": "Promotion details"
+    },
+    "expired": {
+      "es": "Promoción vencida",
+      "en": "Expired promotion"
+    },
+    "terms": {
+      "es": "Consulta términos en el negocio",
+      "en": "See terms at the business"
+    }
+  },
+  "profile": {
+    "title": {
+      "es": "Mi perfil",
+      "en": "My profile"
+    },
+    "stats_title": {
+      "es": "Tu actividad",
+      "en": "Your activity"
+    },
+    "points": {
+      "es": "Puntos",
+      "en": "Points"
+    },
+    "cards_count": {
+      "es": "Tarjetas",
+      "en": "Cards"
+    },
+    "stamps_total": {
+      "es": "Sellos",
+      "en": "Stamps"
+    },
+    "reward_count": {
+      "es": "Premios",
+      "en": "Rewards"
+    },
+    "member_since": {
+      "es": "Miembro desde {date}",
+      "en": "Member since {date}"
+    },
+    "edit_action": {
+      "es": "Editar perfil",
+      "en": "Edit profile"
+    },
+    "settings_action": {
+      "es": "Ajustes",
+      "en": "Settings"
+    },
+    "referral_action": {
+      "es": "Invita a tus amigos",
+      "en": "Invite your friends"
+    },
+    "help_action": {
+      "es": "Ayuda y contacto",
+      "en": "Help and contact"
+    },
+    "legal_action": {
+      "es": "Términos y privacidad",
+      "en": "Terms and privacy"
+    },
+    "about_action": {
+      "es": "Acerca de Punto+",
+      "en": "About Punto+"
+    },
+    "notifications_action": {
+      "es": "Notificaciones",
+      "en": "Notifications"
+    },
+    "business_mode_action": {
+      "es": "Modo negocio",
+      "en": "Business mode"
+    },
+    "switch_to_business": {
+      "es": "Cambiar a modo negocio",
+      "en": "Switch to business mode"
+    },
+    "switch_to_customer": {
+      "es": "Volver a modo cliente",
+      "en": "Back to customer mode"
+    },
+    "verified": {
+      "es": "Cuenta verificada",
+      "en": "Verified account"
+    },
+    "pending_verification": {
+      "es": "Verificación pendiente",
+      "en": "Pending verification"
+    },
+    "verify_action": {
+      "es": "Verificar ahora",
+      "en": "Verify now"
+    },
+    "role_customer": {
+      "es": "Cliente",
+      "en": "Customer"
+    },
+    "role_business": {
+      "es": "Negocio",
+      "en": "Business"
+    },
+    "role_admin": {
+      "es": "Administrador",
+      "en": "Administrator"
+    },
+    "edit_title": {
+      "es": "Editar perfil",
+      "en": "Edit profile"
+    },
+    "edit_success": {
+      "es": "Perfil actualizado.",
+      "en": "Profile updated."
+    },
+    "edit_error": {
+      "es": "No pudimos guardar los cambios.",
+      "en": "We could not save your changes."
+    },
+    "avatar_change": {
+      "es": "Cambiar foto",
+      "en": "Change photo"
+    },
+    "avatar_hint": {
+      "es": "Usa una foto cuadrada de al menos 400x400 px.",
+      "en": "Use a square photo of at least 400x400 px."
+    },
+    "avatar_uploaded": {
+      "es": "Foto actualizada.",
+      "en": "Photo updated."
+    },
+    "avatar_error": {
+      "es": "No pudimos subir la foto.",
+      "en": "We could not upload the photo."
+    },
+    "change_password_title": {
+      "es": "Cambiar contraseña",
+      "en": "Change password"
+    },
+    "change_password_current": {
+      "es": "Contraseña actual",
+      "en": "Current password"
+    },
+    "change_password_new": {
+      "es": "Contraseña nueva",
+      "en": "New password"
+    },
+    "change_password_confirm": {
+      "es": "Repite la contraseña nueva",
+      "en": "Repeat new password"
+    },
+    "change_password_action": {
+      "es": "Actualizar contraseña",
+      "en": "Update password"
+    },
+    "change_password_success": {
+      "es": "Contraseña actualizada.",
+      "en": "Password updated."
+    },
+    "delete_account_title": {
+      "es": "Eliminar cuenta",
+      "en": "Delete account"
+    },
+    "delete_account_message": {
+      "es": "Se borrarán tus tarjetas, sellos y premios. Esta acción no se puede deshacer.",
+      "en": "Your cards, stamps and rewards will be deleted. This action cannot be undone."
+    },
+    "delete_account_action": {
+      "es": "Eliminar mi cuenta",
+      "en": "Delete my account"
+    },
+    "delete_account_confirm": {
+      "es": "Sí, eliminar",
+      "en": "Yes, delete"
+    },
+    "delete_account_success": {
+      "es": "Tu cuenta fue eliminada.",
+      "en": "Your account was deleted."
+    },
+    "delete_account_error": {
+      "es": "No pudimos eliminar la cuenta.",
+      "en": "We could not delete the account."
+    }
+  },
+  "settings": {
+    "title": {
+      "es": "Ajustes",
+      "en": "Settings"
+    },
+    "appearance_title": {
+      "es": "Apariencia",
+      "en": "Appearance"
+    },
+    "theme_label": {
+      "es": "Tema",
+      "en": "Theme"
+    },
+    "theme_system": {
+      "es": "Del sistema",
+      "en": "System"
+    },
+    "theme_light": {
+      "es": "Claro",
+      "en": "Light"
+    },
+    "theme_dark": {
+      "es": "Oscuro",
+      "en": "Dark"
+    },
+    "language_label": {
+      "es": "Idioma",
+      "en": "Language"
+    },
+    "language_system": {
+      "es": "Del sistema",
+      "en": "System"
+    },
+    "language_es": {
+      "es": "Español",
+      "en": "Spanish"
+    },
+    "language_en": {
+      "es": "Inglés",
+      "en": "English"
+    },
+    "notifications_title": {
+      "es": "Notificaciones",
+      "en": "Notifications"
+    },
+    "notify_stamps": {
+      "es": "Sellos nuevos",
+      "en": "New stamps"
+    },
+    "notify_stamps_subtitle": {
+      "es": "Avisos cuando sumas un sello",
+      "en": "Alerts when you collect a stamp"
+    },
+    "notify_rewards": {
+      "es": "Premios disponibles",
+      "en": "Available rewards"
+    },
+    "notify_rewards_subtitle": {
+      "es": "Cuando completas una tarjeta",
+      "en": "When you complete a card"
+    },
+    "notify_promotions": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "notify_promotions_subtitle": {
+      "es": "Novedades de tus negocios favoritos",
+      "en": "News from your favorite businesses"
+    },
+    "notify_general": {
+      "es": "Avisos generales",
+      "en": "General notices"
+    },
+    "location_title": {
+      "es": "Ubicación",
+      "en": "Location"
+    },
+    "location_auto": {
+      "es": "Usar mi ubicación",
+      "en": "Use my location"
+    },
+    "location_auto_subtitle": {
+      "es": "Recomendaciones de negocios cercanos",
+      "en": "Nearby business recommendations"
+    },
+    "location_manual": {
+      "es": "Zona de referencia",
+      "en": "Reference area"
+    },
+    "location_manual_hint": {
+      "es": "Ciudad o colonia",
+      "en": "City or neighborhood"
+    },
+    "data_title": {
+      "es": "Datos",
+      "en": "Data"
+    },
+    "cache_clear": {
+      "es": "Borrar datos guardados",
+      "en": "Clear cached data"
+    },
+    "cache_cleared": {
+      "es": "Datos guardados eliminados.",
+      "en": "Cached data cleared."
+    },
+    "cache_subtitle": {
+      "es": "Se volverán a descargar tus tarjetas al abrir la app",
+      "en": "Your cards will be downloaded again when you open the app"
+    },
+    "version_label": {
+      "es": "Versión {version}",
+      "en": "Version {version}"
+    },
+    "preferences_saved": {
+      "es": "Preferencias guardadas.",
+      "en": "Preferences saved."
+    }
+  },
+  "notifications": {
+    "title": {
+      "es": "Notificaciones",
+      "en": "Notifications"
+    },
+    "empty_title": {
+      "es": "Sin notificaciones",
+      "en": "No notifications"
+    },
+    "empty_message": {
+      "es": "Aquí verás tus sellos, premios y promociones.",
+      "en": "You will see your stamps, rewards and promotions here."
+    },
+    "mark_all_read": {
+      "es": "Marcar todo como leído",
+      "en": "Mark all as read"
+    },
+    "marked_read": {
+      "es": "Notificaciones marcadas como leídas.",
+      "en": "Notifications marked as read."
+    },
+    "error": {
+      "es": "No pudimos cargar las notificaciones.",
+      "en": "We could not load notifications."
+    },
+    "type_stamp_title": {
+      "es": "Sello registrado",
+      "en": "Stamp registered"
+    },
+    "type_stamp_body": {
+      "es": "{business} sumó un sello a tu tarjeta ({count} en total).",
+      "en": "{business} added a stamp to your card ({count} total)."
+    },
+    "type_reward_title": {
+      "es": "¡Premio desbloqueado!",
+      "en": "Reward unlocked!"
+    },
+    "type_reward_body": {
+      "es": "Completaste {card}. Ya puedes canjear tu recompensa.",
+      "en": "You completed {card}. You can now redeem your reward."
+    },
+    "type_promotion_title": {
+      "es": "Nueva promoción",
+      "en": "New promotion"
+    },
+    "type_promotion_body": {
+      "es": "{business} publicó: {promotion}",
+      "en": "{business} published: {promotion}"
+    },
+    "type_generic_title": {
+      "es": "Novedad en Punto+",
+      "en": "Punto+ news"
+    }
+  },
+  "referral": {
+    "title": {
+      "es": "Invita y gana",
+      "en": "Invite and earn"
+    },
+    "subtitle": {
+      "es": "Comparte tu código: tú y tu invitado reciben puntos al primer sello.",
+      "en": "Share your code: you and your guest get points after the first stamp."
+    },
+    "code_label": {
+      "es": "Tu código",
+      "en": "Your code"
+    },
+    "copy_action": {
+      "es": "Copiar código",
+      "en": "Copy code"
+    },
+    "share_action": {
+      "es": "Compartir invitación",
+      "en": "Share invitation"
+    },
+    "share_message": {
+      "es": "¡Únete a Punto+ con mi código {code} y empieza a acumular recompensas!",
+      "en": "Join Punto+ with my code {code} and start collecting rewards!"
+    },
+    "how_title": {
+      "es": "¿Cómo funciona?",
+      "en": "How does it work?"
+    },
+    "step_1": {
+      "es": "Comparte tu código con quien quieras invitar.",
+      "en": "Share your code with whoever you want to invite."
+    },
+    "step_2": {
+      "es": "Tu invitado se registra y suma su primer sello.",
+      "en": "Your guest signs up and collects their first stamp."
+    },
+    "step_3": {
+      "es": "Ambos reciben puntos en su cuenta.",
+      "en": "You both receive points in your account."
+    },
+    "invited_count": {
+      "es": "{count} invitados",
+      "en": "{count} invites"
+    },
+    "pending_label": {
+      "es": "Pendientes",
+      "en": "Pending"
+    },
+    "completed_label": {
+      "es": "Completados",
+      "en": "Completed"
+    },
+    "empty_title": {
+      "es": "Aún no invitas a nadie",
+      "en": "You have not invited anyone yet"
+    },
+    "empty_message": {
+      "es": "Comparte tu código y empieza a ganar puntos extra.",
+      "en": "Share your code and start earning extra points."
+    },
+    "error": {
+      "es": "No pudimos cargar tus referidos.",
+      "en": "We could not load your referrals."
+    }
+  },
+  "legal": {
+    "terms_title": {
+      "es": "Términos y condiciones",
+      "en": "Terms and conditions"
+    },
+    "privacy_title": {
+      "es": "Política de privacidad",
+      "en": "Privacy policy"
+    },
+    "about_title": {
+      "es": "Acerca de Punto+",
+      "en": "About Punto+"
+    },
+    "updated_at": {
+      "es": "Última actualización: {date}",
+      "en": "Last updated: {date}"
+    },
+    "error": {
+      "es": "No pudimos cargar el documento.",
+      "en": "We could not load the document."
+    },
+    "about_description": {
+      "es": "Punto+ es la billetera de recompensas para negocios locales: acumula sellos, descubre promociones y canjea premios reales desde tu celular.",
+      "en": "Punto+ is the rewards wallet for local businesses: collect stamps, discover promotions and redeem real rewards from your phone."
+    },
+    "about_version": {
+      "es": "Versión",
+      "en": "Version"
+    },
+    "about_contact": {
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    "about_website": {
+      "es": "Sitio web",
+      "en": "Website"
+    },
+    "about_legal": {
+      "es": "Legal",
+      "en": "Legal"
+    },
+    "about_made_for": {
+      "es": "Hecho para negocios y clientes de México.",
+      "en": "Made for businesses and customers in Mexico."
+    }
+  },
+  "help": {
+    "title": {
+      "es": "Ayuda y contacto",
+      "en": "Help and contact"
+    },
+    "subtitle": {
+      "es": "Respuestas rápidas y canales de soporte.",
+      "en": "Quick answers and support channels."
+    },
+    "contact_title": {
+      "es": "¿Necesitas más ayuda?",
+      "en": "Need more help?"
+    },
+    "contact_message": {
+      "es": "Escríbenos y te respondemos en menos de 24 horas hábiles.",
+      "en": "Write to us and we will reply within 24 business hours."
+    },
+    "email_action": {
+      "es": "Escribir a soporte",
+      "en": "Email support"
+    },
+    "faq_title": {
+      "es": "Preguntas frecuentes",
+      "en": "Frequently asked questions"
+    },
+    "faq_1_question": {
+      "es": "¿Cómo acumulo sellos?",
+      "en": "How do I collect stamps?"
+    },
+    "faq_1_answer": {
+      "es": "Abre la tarjeta del negocio y muestra tu código QR en cada compra. El personal lo escanea y el sello aparece al instante.",
+      "en": "Open the business card and show your QR code on each purchase. Staff scans it and the stamp appears instantly."
+    },
+    "faq_2_question": {
+      "es": "¿Qué pasa si mi código QR expira?",
+      "en": "What if my QR code expires?"
+    },
+    "faq_2_answer": {
+      "es": "Los códigos duran pocos minutos por seguridad. Genera uno nuevo desde la pantalla del QR y muéstralo de nuevo.",
+      "en": "Codes last a few minutes for security. Generate a new one from the QR screen and show it again."
+    },
+    "faq_3_question": {
+      "es": "¿Cómo canjeo una recompensa?",
+      "en": "How do I redeem a reward?"
+    },
+    "faq_3_answer": {
+      "es": "Cuando completas los sellos, la recompensa aparece en la pestaña Premios. Ábrela, presiona canjear y muestra el código al negocio.",
+      "en": "When you complete the stamps, the reward appears in the Rewards tab. Open it, tap redeem and show the code to the business."
+    },
+    "faq_4_question": {
+      "es": "¿Puedo registrarme como negocio?",
+      "en": "Can I register as a business?"
+    },
+    "faq_4_answer": {
+      "es": "Sí. Al crear la cuenta elige el tipo Negocio para escanear QR y administrar tus tarjetas y promociones.",
+      "en": "Yes. When creating your account choose the Business type to scan QRs and manage your cards and promotions."
+    },
+    "faq_5_question": {
+      "es": "¿Cómo elimino mi cuenta?",
+      "en": "How do I delete my account?"
+    },
+    "faq_5_answer": {
+      "es": "Ve a Perfil > Editar perfil > Eliminar cuenta. Se borrarán tus datos de forma permanente.",
+      "en": "Go to Profile > Edit profile > Delete account. Your data will be permanently deleted."
+    }
+  },
+  "manage_dashboard": {
+    "title": {
+      "es": "Panel del negocio",
+      "en": "Business dashboard"
+    },
+    "greeting": {
+      "es": "Hola, {name}",
+      "en": "Hi, {name}"
+    },
+    "subtitle": {
+      "es": "Así va tu programa de fidelidad.",
+      "en": "Here is how your loyalty program is doing."
+    },
+    "metric_stamps_today": {
+      "es": "Sellos hoy",
+      "en": "Stamps today"
+    },
+    "metric_stamps_month": {
+      "es": "Sellos del mes",
+      "en": "Stamps this month"
+    },
+    "metric_customers": {
+      "es": "Clientes fieles",
+      "en": "Loyal customers"
+    },
+    "metric_active_cards": {
+      "es": "Tarjetas activas",
+      "en": "Active cards"
+    },
+    "metric_redemptions": {
+      "es": "Premios canjeados",
+      "en": "Redeemed rewards"
+    },
+    "chart_title": {
+      "es": "Sellos por día",
+      "en": "Stamps per day"
+    },
+    "chart_range_week": {
+      "es": "7 días",
+      "en": "7 days"
+    },
+    "chart_range_month": {
+      "es": "30 días",
+      "en": "30 days"
+    },
+    "chart_empty": {
+      "es": "Sin datos en este periodo",
+      "en": "No data for this period"
+    },
+    "top_customers_title": {
+      "es": "Clientes destacados",
+      "en": "Top customers"
+    },
+    "recent_stamps_title": {
+      "es": "Últimos sellos",
+      "en": "Latest stamps"
+    },
+    "recent_empty": {
+      "es": "Sin sellos registrados hoy",
+      "en": "No stamps registered today"
+    },
+    "error": {
+      "es": "No pudimos cargar tus métricas.",
+      "en": "We could not load your metrics."
+    },
+    "quick_scan": {
+      "es": "Escanear QR",
+      "en": "Scan QR"
+    },
+    "quick_cards": {
+      "es": "Mis tarjetas",
+      "en": "My cards"
+    },
+    "quick_promotions": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "quick_customers": {
+      "es": "Clientes",
+      "en": "Customers"
+    }
+  },
+  "manage_cards": {
+    "title": {
+      "es": "Tarjetas de fidelidad",
+      "en": "Loyalty cards"
+    },
+    "subtitle": {
+      "es": "Diseña las tarjetas que verán tus clientes.",
+      "en": "Design the cards your customers will see."
+    },
+    "new_action": {
+      "es": "Nueva tarjeta",
+      "en": "New card"
+    },
+    "empty_title": {
+      "es": "Aún no tienes tarjetas",
+      "en": "You have no cards yet"
+    },
+    "empty_message": {
+      "es": "Crea tu primera tarjeta, define los sellos y la recompensa.",
+      "en": "Create your first card, define the stamps and the reward."
+    },
+    "form_create_title": {
+      "es": "Nueva tarjeta",
+      "en": "New card"
+    },
+    "form_edit_title": {
+      "es": "Editar tarjeta",
+      "en": "Edit card"
+    },
+    "field_name": {
+      "es": "Nombre de la tarjeta",
+      "en": "Card name"
+    },
+    "field_name_hint": {
+      "es": "Ej. Café de la casa",
+      "en": "E.g. House coffee"
+    },
+    "field_description": {
+      "es": "Descripción",
+      "en": "Description"
+    },
+    "field_description_hint": {
+      "es": "Explica a tus clientes cómo funciona",
+      "en": "Explain to your customers how it works"
+    },
+    "field_required_stamps": {
+      "es": "Sellos necesarios",
+      "en": "Required stamps"
+    },
+    "field_reward": {
+      "es": "Recompensa",
+      "en": "Reward"
+    },
+    "field_reward_hint": {
+      "es": "Ej. Café gratis",
+      "en": "E.g. Free coffee"
+    },
+    "field_color": {
+      "es": "Color de fondo",
+      "en": "Background color"
+    },
+    "field_active": {
+      "es": "Tarjeta activa",
+      "en": "Active card"
+    },
+    "field_active_subtitle": {
+      "es": "Los clientes pueden unirse y sumar sellos",
+      "en": "Customers can join and collect stamps"
+    },
+    "preview_title": {
+      "es": "Vista previa",
+      "en": "Preview"
+    },
+    "save_action": {
+      "es": "Guardar tarjeta",
+      "en": "Save card"
+    },
+    "saved": {
+      "es": "Tarjeta guardada.",
+      "en": "Card saved."
+    },
+    "save_error": {
+      "es": "No pudimos guardar la tarjeta.",
+      "en": "We could not save the card."
+    },
+    "deleted": {
+      "es": "Tarjeta eliminada.",
+      "en": "Card deleted."
+    },
+    "delete_confirm_title": {
+      "es": "¿Eliminar tarjeta?",
+      "en": "Delete card?"
+    },
+    "delete_confirm_message": {
+      "es": "Los clientes ya no podrán sumar sellos en esta tarjeta.",
+      "en": "Customers will no longer be able to collect stamps on this card."
+    },
+    "step_basics": {
+      "es": "Datos",
+      "en": "Basics"
+    },
+    "step_design": {
+      "es": "Diseño",
+      "en": "Design"
+    },
+    "step_reward": {
+      "es": "Recompensa",
+      "en": "Reward"
+    },
+    "step_review": {
+      "es": "Revisión",
+      "en": "Review"
+    },
+    "step_next": {
+      "es": "Siguiente",
+      "en": "Next"
+    },
+    "step_back": {
+      "es": "Atrás",
+      "en": "Back"
+    },
+    "assets_title": {
+      "es": "Imágenes",
+      "en": "Images"
+    },
+    "assets_logo": {
+      "es": "Logo del negocio",
+      "en": "Business logo"
+    },
+    "assets_background": {
+      "es": "Imagen de fondo",
+      "en": "Background image"
+    },
+    "assets_stamp_icon": {
+      "es": "Icono del sello",
+      "en": "Stamp icon"
+    },
+    "assets_upload": {
+      "es": "Subir imagen",
+      "en": "Upload image"
+    },
+    "assets_hint": {
+      "es": "PNG o JPG de hasta 2 MB. Requiere el selector de imágenes habilitado.",
+      "en": "PNG or JPG up to 2 MB. Requires the image picker plugin enabled."
+    },
+    "assets_uploaded": {
+      "es": "Imagen cargada.",
+      "en": "Image uploaded."
+    },
+    "assets_error": {
+      "es": "No pudimos subir la imagen.",
+      "en": "We could not upload the image."
+    },
+    "error": {
+      "es": "No pudimos cargar tus tarjetas.",
+      "en": "We could not load your cards."
+    },
+    "customers_count": {
+      "es": "{count} clientes",
+      "en": "{count} customers"
+    }
+  },
+  "manage_scan": {
+    "title": {
+      "es": "Escanear QR",
+      "en": "Scan QR"
+    },
+    "instruction": {
+      "es": "Apunta la cámara al código QR del cliente",
+      "en": "Point the camera at the customer QR code"
+    },
+    "camera_unavailable_title": {
+      "es": "Cámara no disponible",
+      "en": "Camera unavailable"
+    },
+    "camera_unavailable_message": {
+      "es": "Este build no incluye el escáner. Usa el registro manual con el código del cliente.",
+      "en": "This build does not include the scanner. Use manual entry with the customer code."
+    },
+    "manual_entry": {
+      "es": "Registrar código manualmente",
+      "en": "Enter code manually"
+    },
+    "manual_hint": {
+      "es": "Código del cliente",
+      "en": "Customer code"
+    },
+    "manual_action": {
+      "es": "Registrar sello",
+      "en": "Register stamp"
+    },
+    "processing": {
+      "es": "Registrando sello…",
+      "en": "Registering stamp…"
+    },
+    "success_title": {
+      "es": "¡Sello registrado!",
+      "en": "Stamp registered!"
+    },
+    "success_message": {
+      "es": "{name} ahora tiene {count} sellos en {card}.",
+      "en": "{name} now has {count} stamps on {card}."
+    },
+    "reward_unlocked": {
+      "es": "¡La tarjeta se completó! Puede canjear su premio.",
+      "en": "The card is complete! The reward can be redeemed."
+    },
+    "error": {
+      "es": "No pudimos registrar el sello.",
+      "en": "We could not register the stamp."
+    },
+    "invalid_code": {
+      "es": "El código no es válido o ya expiró.",
+      "en": "The code is invalid or has expired."
+    },
+    "duplicate": {
+      "es": "Ese código ya se registró en esta sesión.",
+      "en": "That code was already registered in this session."
+    },
+    "scan_again": {
+      "es": "Escanear otro",
+      "en": "Scan another"
+    },
+    "recent_title": {
+      "es": "Sellos recientes",
+      "en": "Recent stamps"
+    },
+    "recent_empty": {
+      "es": "Todavía no registras sellos hoy",
+      "en": "No stamps registered today"
+    },
+    "customer_label": {
+      "es": "Cliente",
+      "en": "Customer"
+    },
+    "card_label": {
+      "es": "Tarjeta",
+      "en": "Card"
+    },
+    "stamps_label": {
+      "es": "Sellos",
+      "en": "Stamps"
+    }
+  },
+  "manage_promotions": {
+    "title": {
+      "es": "Promociones",
+      "en": "Promotions"
+    },
+    "subtitle": {
+      "es": "Publica beneficios para tus clientes.",
+      "en": "Publish benefits for your customers."
+    },
+    "new_action": {
+      "es": "Nueva promoción",
+      "en": "New promotion"
+    },
+    "empty_title": {
+      "es": "Sin promociones",
+      "en": "No promotions"
+    },
+    "empty_message": {
+      "es": "Crea una promoción para atraer más visitas.",
+      "en": "Create a promotion to attract more visits."
+    },
+    "form_create_title": {
+      "es": "Nueva promoción",
+      "en": "New promotion"
+    },
+    "form_edit_title": {
+      "es": "Editar promoción",
+      "en": "Edit promotion"
+    },
+    "field_title": {
+      "es": "Título",
+      "en": "Title"
+    },
+    "field_title_hint": {
+      "es": "2x1 en bebidas",
+      "en": "2 for 1 on drinks"
+    },
+    "field_description": {
+      "es": "Descripción",
+      "en": "Description"
+    },
+    "field_starts_at": {
+      "es": "Inicia",
+      "en": "Starts"
+    },
+    "field_ends_at": {
+      "es": "Termina",
+      "en": "Ends"
+    },
+    "field_active": {
+      "es": "Promoción activa",
+      "en": "Active promotion"
+    },
+    "pick_date": {
+      "es": "Elegir fecha",
+      "en": "Pick date"
+    },
+    "save_action": {
+      "es": "Guardar promoción",
+      "en": "Save promotion"
+    },
+    "saved": {
+      "es": "Promoción guardada.",
+      "en": "Promotion saved."
+    },
+    "save_error": {
+      "es": "No pudimos guardar la promoción.",
+      "en": "We could not save the promotion."
+    },
+    "deleted": {
+      "es": "Promoción eliminada.",
+      "en": "Promotion deleted."
+    },
+    "delete_confirm_title": {
+      "es": "¿Eliminar promoción?",
+      "en": "Delete promotion?"
+    },
+    "delete_confirm_message": {
+      "es": "Dejará de mostrarse a los clientes.",
+      "en": "It will stop being shown to customers."
+    },
+    "error": {
+      "es": "No pudimos cargar tus promociones.",
+      "en": "We could not load your promotions."
+    },
+    "status_active": {
+      "es": "Activa",
+      "en": "Active"
+    },
+    "status_scheduled": {
+      "es": "Programada",
+      "en": "Scheduled"
+    },
+    "status_expired": {
+      "es": "Vencida",
+      "en": "Expired"
+    },
+    "status_paused": {
+      "es": "Pausada",
+      "en": "Paused"
+    }
+  },
+  "manage_customers": {
+    "title": {
+      "es": "Clientes fieles",
+      "en": "Loyal customers"
+    },
+    "subtitle": {
+      "es": "Personas que acumulan sellos en tus tarjetas.",
+      "en": "People collecting stamps on your cards."
+    },
+    "search_hint": {
+      "es": "Buscar por nombre o correo",
+      "en": "Search by name or email"
+    },
+    "empty_title": {
+      "es": "Sin clientes todavía",
+      "en": "No customers yet"
+    },
+    "empty_message": {
+      "es": "Cuando tus clientes escaneen su primer QR aparecerán aquí.",
+      "en": "When your customers scan their first QR they will appear here."
+    },
+    "error": {
+      "es": "No pudimos cargar tus clientes.",
+      "en": "We could not load your customers."
+    },
+    "customer_since": {
+      "es": "Cliente desde {date}",
+      "en": "Customer since {date}"
+    },
+    "last_visit": {
+      "es": "Última visita: {date}",
+      "en": "Last visit: {date}"
+    },
+    "card_progress": {
+      "es": "{card}: {current}/{total}",
+      "en": "{card}: {current}/{total}"
+    },
+    "detail_title": {
+      "es": "Detalle del cliente",
+      "en": "Customer details"
+    },
+    "stamps_total": {
+      "es": "{count} sellos acumulados",
+      "en": "{count} stamps collected"
+    },
+    "cards_count": {
+      "es": "{count} tarjetas",
+      "en": "{count} cards"
+    },
+    "error_detail": {
+      "es": "No pudimos cargar al cliente.",
+      "en": "We could not load the customer."
+    }
+  },
+  "errors": {
+    "not_found_title": {
+      "es": "Pantalla no encontrada",
+      "en": "Screen not found"
+    },
+    "not_found_message": {
+      "es": "La ruta que buscas no existe o cambió de lugar.",
+      "en": "The route you are looking for does not exist or moved."
+    },
+    "not_found_action": {
+      "es": "Ir al inicio",
+      "en": "Go home"
+    },
+    "no_connection_title": {
+      "es": "Sin conexión",
+      "en": "No connection"
+    },
+    "no_connection_message": {
+      "es": "Revisa tu red e inténtalo de nuevo. Tus datos guardados siguen disponibles.",
+      "en": "Check your network and try again. Your cached data is still available."
+    },
+    "no_connection_action": {
+      "es": "Reintentar",
+      "en": "Retry"
+    },
+    "maintenance_title": {
+      "es": "Estamos en mantenimiento",
+      "en": "We are under maintenance"
+    },
+    "maintenance_message": {
+      "es": "Volvemos en unos minutos. Gracias por tu paciencia.",
+      "en": "We will be back in a few minutes. Thanks for your patience."
+    },
+    "forbidden_title": {
+      "es": "Acceso restringido",
+      "en": "Restricted access"
+    },
+    "forbidden_message": {
+      "es": "Tu cuenta no tiene permisos para ver esta sección.",
+      "en": "Your account does not have permission to view this section."
+    },
+    "unauthorized_title": {
+      "es": "Sesión requerida",
+      "en": "Session required"
+    },
+    "unauthorized_message": {
+      "es": "Ingresa de nuevo para continuar.",
+      "en": "Please sign in again to continue."
+    },
+    "rate_limited": {
+      "es": "Demasiados intentos. Espera un momento.",
+      "en": "Too many attempts. Please wait a moment."
+    },
+    "timeout": {
+      "es": "La conexión tardó demasiado. Inténtalo de nuevo.",
+      "en": "The connection took too long. Please try again."
+    },
+    "server": {
+      "es": "Tuvimos un problema en el servidor. Inténtalo más tarde.",
+      "en": "We had a server problem. Please try again later."
+    },
+    "connection": {
+      "es": "No pudimos conectarnos. Revisa tu conexión a internet.",
+      "en": "We could not connect. Check your internet connection."
+    },
+    "unexpected": {
+      "es": "Ocurrió un error inesperado. Inténtalo de nuevo.",
+      "en": "Something unexpected happened. Please try again."
+    },
+    "validation_failed": {
+      "es": "Revisa los datos del formulario.",
+      "en": "Check the form fields."
+    },
+    "cancelled": {
+      "es": "La solicitud fue cancelada.",
+      "en": "The request was cancelled."
+    },
+    "secure_connection": {
+      "es": "No se pudo validar la conexión segura.",
+      "en": "The secure connection could not be validated."
+    },
+    "unauthorized": {
+      "es": "Tus datos de acceso no son correctos.",
+      "en": "Your sign-in details are not correct."
+    },
+    "forbidden": {
+      "es": "Tu cuenta no tiene permisos para esta acción.",
+      "en": "Your account cannot perform this action."
+    },
+    "not_found": {
+      "es": "No encontramos la información.",
+      "en": "We could not find the information."
+    },
+    "request_failed": {
+      "es": "No pudimos completar la solicitud.",
+      "en": "We could not complete the request."
+    }
+  }
+}

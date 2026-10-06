@@ -1,0 +1,108 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verificadores:
+    name: Verificadores estáticos (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sintaxis, imports, l10n y rutas
+        run: python3 tool/check_codebase.py
+      - name: Símbolos y argumentos con nombre
+        run: python3 tool/check_symbols.py
+      - name: Instalar oráculos de QR
+        run: pip install segno qrcodegen
+      - name: Encoder QR contra implementaciones independientes
+        run: python3 tool/verify_qr_encoder.py
+
+  flutter:
+    name: Flutter analyze + test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Análisis estricto
+        id: analyze
+        continue-on-error: true
+        run: flutter analyze --fatal-infos --fatal-warnings 2>&1 | tee analyze.txt
+      - name: Pruebas
+        id: tests
+        continue-on-error: true
+        run: flutter test --reporter expanded 2>&1 | tee tests.txt
+      # El resultado se publica como comentario para poder revisarlo desde el PR
+      # (los logs de Actions no siempre son accesibles desde entornos restringidos).
+      - name: Publicar resultado en el pull request
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.analyze.outcome }}" = "failure" ] || [ "${{ steps.tests.outcome }}" = "failure" ]; then
+            {
+              echo "### Resultado de CI (${{ github.sha }})"
+              echo
+              echo "**Análisis** (\`${{ steps.analyze.outcome }}\`)"
+              echo '```'
+              head -c 30000 analyze.txt || true
+              echo '```'
+              echo "**Pruebas** (\`${{ steps.tests.outcome }}\`)"
+              echo '```'
+              head -c 20000 tests.txt || true
+              echo '```'
+            } > ci-resultado.md
+            gh pr comment "${{ github.event.pull_request.number }}" \
+              --body-file ci-resultado.md --edit-last --create-if-none || true
+          fi
+      - name: Fallar si el análisis o las pruebas no pasan
+        if: steps.analyze.outcome == 'failure' || steps.tests.outcome == 'failure'
+        run: exit 1
+
+  artefactos:
+    name: Android debug APK
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Compilar APK de depuración
+        id: apk
+        continue-on-error: true
+        run: flutter build apk --debug 2>&1 | tee apk.txt
+      - name: Publicar resultado de la compilación
+        if: steps.apk.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### Compilación Android fallida (${{ github.sha }})"
+            echo
+            echo '```'
+            tail -c 30000 apk.txt || true
+            echo '```'
+          } > apk-resultado.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file apk-resultado.md || true
+      - name: Fallar si el APK no se compiló
+        if: steps.apk.outcome == 'failure'
+        run: exit 1

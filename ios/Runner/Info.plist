@@ -24,6 +24,18 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>GMSApiKey</key>
+	<string>$(GOOGLE_MAPS_API_KEY)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Punto+ usa la cámara para escanear los códigos QR de las tarjetas de fidelidad y registrar sellos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Punto+ usa tu ubicación para mostrarte los negocios participantes más cercanos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Punto+ accede a tus fotos para personalizar tu perfil y las tarjetas del negocio.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Punto+ guarda en tus fotos las imágenes que compartas desde la app.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

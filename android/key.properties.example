@@ -1,0 +1,7 @@
+# Copia este archivo como android/key.properties (ignorado por git) o define
+# las variables de entorno KEYSTORE_PATH, KEYSTORE_PASSWORD, KEY_ALIAS y
+# KEY_PASSWORD en tu máquina o en CI.
+storeFile=/ruta/absoluta/a/punto-plus-release.jks
+storePassword=cambia-esta-contraseña
+keyAlias=puntoplus
+keyPassword=cambia-esta-contraseña

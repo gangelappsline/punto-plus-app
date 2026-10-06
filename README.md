@@ -206,9 +206,13 @@ sustituirlos en pruebas.
 ## Calidad y verificación
 
 ```bash
-flutter analyze --fatal-infos --fatal-warnings
-flutter test
+flutter analyze --fatal-infos --fatal-warnings   # cero avisos
+flutter test                                     # pruebas unitarias y de widgets
 ```
+
+Estos dos comandos y la compilación del APK de depuración se ejecutan en CI
+(`.github/workflows/ci.yml`), así que cualquier regresión de compilación se
+detecta antes de fusionar.
 
 Pruebas incluidas:
 
@@ -278,5 +282,7 @@ Además:
 - La **paleta** mantiene la identidad ya entregada (`#007D8D` → `#1AA5B7` con
   acento `#FFA15E`) en lugar del `#6C5CE7` del brief inicial. Ver
   [`docs/adr/0005-paleta-de-marca.md`](docs/adr/0005-paleta-de-marca.md).
-- `flutter analyze` (cero avisos) y `flutter test` deben ejecutarse en una
-  máquina con el SDK; los verificadores de Python cubren el resto.
+- Estado de verificación de esta entrega: `flutter analyze --fatal-infos
+  --fatal-warnings` sin hallazgos, `flutter test` en verde, APK de depuración
+  compilado en CI y los tres verificadores de Python sin problemas. Al integrar
+  los SDK nativos hay que volver a ejecutar la matriz completa.

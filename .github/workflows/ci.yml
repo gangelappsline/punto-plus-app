@@ -27,6 +27,9 @@ jobs:
   flutter:
     name: Flutter analyze + test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -35,6 +38,50 @@ jobs:
           cache: true
       - run: flutter pub get
       - name: Análisis estricto
-        run: flutter analyze --fatal-infos --fatal-warnings
+        id: analyze
+        continue-on-error: true
+        run: flutter analyze --fatal-infos --fatal-warnings 2>&1 | tee analyze.txt
       - name: Pruebas
-        run: flutter test --reporter expanded
+        id: tests
+        continue-on-error: true
+        run: flutter test --reporter expanded 2>&1 | tee tests.txt
+      # El resultado se publica como comentario para poder revisarlo desde el PR
+      # (los logs de Actions no siempre son accesibles desde entornos restringidos).
+      - name: Publicar resultado en el pull request
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.analyze.outcome }}" = "failure" ] || [ "${{ steps.tests.outcome }}" = "failure" ]; then
+            {
+              echo "### Resultado de CI (${{ github.sha }})"
+              echo
+              echo "**Análisis** (\`${{ steps.analyze.outcome }}\`)"
+              echo '```'
+              head -c 30000 analyze.txt || true
+              echo '```'
+              echo "**Pruebas** (\`${{ steps.tests.outcome }}\`)"
+              echo '```'
+              head -c 20000 tests.txt || true
+              echo '```'
+            } > ci-resultado.md
+            gh pr comment "${{ github.event.pull_request.number }}" \
+              --body-file ci-resultado.md --edit-last --create-if-none || true
+          fi
+      - name: Fallar si el análisis o las pruebas no pasan
+        if: steps.analyze.outcome == 'failure' || steps.tests.outcome == 'failure'
+        run: exit 1
+
+  artefactos:
+    name: Android debug APK
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Compilar APK de depuración
+        run: flutter build apk --debug

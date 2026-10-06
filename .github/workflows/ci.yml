@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verificadores:
+    name: Verificadores estáticos (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sintaxis, imports, l10n y rutas
+        run: python3 tool/check_codebase.py
+      - name: Símbolos y argumentos con nombre
+        run: python3 tool/check_symbols.py
+      - name: Instalar oráculos de QR
+        run: pip install segno qrcodegen
+      - name: Encoder QR contra implementaciones independientes
+        run: python3 tool/verify_qr_encoder.py
+
+  flutter:
+    name: Flutter analyze + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: Análisis estricto
+        run: flutter analyze --fatal-infos --fatal-warnings
+      - name: Pruebas
+        run: flutter test --reporter expanded

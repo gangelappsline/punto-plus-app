@@ -29,6 +29,14 @@ ios/Podfile.lock
 key.properties
 .env
 
+# Python (herramientas de verificación)
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Variables de compilación locales (--dart-define-from-file)
+env/
+
 # OS
 .DS_Store
 Thumbs.db

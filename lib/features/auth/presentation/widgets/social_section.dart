@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import 'social_button.dart';
+import '../../../../core/utils/extensions.dart';
 
 final class SocialSection extends StatelessWidget {
   const SocialSection({
@@ -16,13 +17,15 @@ final class SocialSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
         children: <Widget>[
-          const Row(
+          Row(
             children: <Widget>[
-              Expanded(child: Divider(color: AppColors.divider, height: 1)),
+              const Expanded(
+                child: Divider(color: AppColors.divider, height: 1),
+              ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 9),
+                padding: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(
-                  'O INGRESA CON',
+                  context.l10n.authSocialDivider,
                   style: TextStyle(
                     color: Color(0xFF788287),
                     fontSize: 10.5,
@@ -30,7 +33,9 @@ final class SocialSection extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(child: Divider(color: AppColors.divider, height: 1)),
+              const Expanded(
+                child: Divider(color: AppColors.divider, height: 1),
+              ),
             ],
           ),
           const SizedBox(height: 17),

@@ -7,6 +7,8 @@ import '../models/login_request.dart';
 import '../models/password_recovery_request.dart';
 import '../models/register_request.dart';
 import '../models/social_auth_request.dart';
+import '../models/user_model.dart';
+import '../models/verification_requests.dart';
 
 final class AuthRepositoryImpl implements AuthRepository {
   const AuthRepositoryImpl(this._remoteDataSource, this._tokenStorage);
@@ -23,16 +25,22 @@ final class AuthRepositoryImpl implements AuthRepository {
       _persistSession(() => _remoteDataSource.register(request));
 
   @override
+  Future<Result<void>> verifyCode(VerifyCodeRequest request) =>
+      _run(() => _remoteDataSource.verifyCode(request));
+
+  @override
+  Future<Result<void>> resendCode(ResendCodeRequest request) =>
+      _run(() => _remoteDataSource.resendCode(request));
+
+  @override
   Future<Result<void>> requestPasswordReset(
     PasswordRecoveryRequest request,
-  ) async {
-    try {
-      await _remoteDataSource.requestPasswordReset(request);
-      return const Success<void>(null);
-    } on Exception catch (error) {
-      return Failure<void>(error);
-    }
-  }
+  ) =>
+      _run(() => _remoteDataSource.requestPasswordReset(request));
+
+  @override
+  Future<Result<void>> resetPassword(ResetPasswordRequest request) =>
+      _run(() => _remoteDataSource.resetPassword(request));
 
   @override
   Future<Result<AuthSession>> authenticateWithSocialProvider(
@@ -44,12 +52,13 @@ final class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<AuthSession?> restoreSession() async {
-    final session = await _tokenStorage.readSession();
+    final AuthSession? session = await _tokenStorage.readSession();
     if (session == null) return null;
     if (!session.isExpired) return session;
 
     try {
-      final refreshedSession = await _remoteDataSource.refreshSession(
+      final AuthSession refreshedSession = await _remoteDataSource
+          .refreshSession(
         refreshToken: session.refreshToken,
         currentUser: session.user,
       );
@@ -62,13 +71,34 @@ final class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
+  Future<Result<UserModel>> refreshUser() async {
+    try {
+      final UserModel user = await _remoteDataSource.fetchProfile();
+      final AuthSession? session = await _tokenStorage.readSession();
+      if (session != null) {
+        await _tokenStorage.saveSession(
+          AuthSession(
+            accessToken: session.accessToken,
+            refreshToken: session.refreshToken,
+            expiresAt: session.expiresAt,
+            user: user,
+          ),
+        );
+      }
+      return Success<UserModel>(user);
+    } on Exception catch (error) {
+      return Failure<UserModel>(error);
+    }
+  }
+
+  @override
   Future<Result<void>> logout() async {
     try {
       await _remoteDataSource.logout();
       await _tokenStorage.clear();
       return const Success<void>(null);
     } on Exception catch (error) {
-      // Local credentials are removed even if the remote logout fails.
+      // La sesión local se limpia incluso si el backend no responde.
       await _tokenStorage.clear();
       return Failure<void>(error);
     }
@@ -78,11 +108,20 @@ final class AuthRepositoryImpl implements AuthRepository {
     Future<AuthSession> Function() operation,
   ) async {
     try {
-      final session = await operation();
+      final AuthSession session = await operation();
       await _tokenStorage.saveSession(session);
       return Success<AuthSession>(session);
     } on Exception catch (error) {
       return Failure<AuthSession>(error);
+    }
+  }
+
+  Future<Result<void>> _run(Future<void> Function() operation) async {
+    try {
+      await operation();
+      return const Success<void>(null);
+    } on Exception catch (error) {
+      return Failure<void>(error);
     }
   }
 }

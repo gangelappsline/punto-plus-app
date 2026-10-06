@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/extensions.dart';
 
 final class BrandHeader extends StatelessWidget {
   const BrandHeader({super.key});
@@ -19,17 +20,17 @@ final class BrandHeader extends StatelessWidget {
               color: AppColors.lightBlue,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Row(
+            child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Icon(
+                const Icon(
                   Icons.sell_outlined,
                   size: 14,
                   color: AppColors.navy,
                 ),
-                SizedBox(width: 6),
+                const SizedBox(width: 6),
                 Text(
-                  'Tu billetera de recompensas favorita',
+                  context.l10n.appTagline,
                   style: TextStyle(
                     color: AppColors.navy,
                     fontSize: 11,
@@ -41,8 +42,8 @@ final class BrandHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
-            'Colecciona sellos, canjea premios y lleva todas tus\ncuponeras en un solo lugar.',
+          Text(
+            context.l10n.authWelcomeSubtitle,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: AppColors.textMuted,
@@ -60,7 +61,7 @@ final class PuntoPlusLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Semantics(
-        label: 'Punto más',
+        label: context.l10n.appName,
         image: true,
         child: const Text.rich(
           TextSpan(

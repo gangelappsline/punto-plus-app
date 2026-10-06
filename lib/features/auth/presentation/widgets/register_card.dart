@@ -11,6 +11,7 @@ import '../../data/models/login_request.dart';
 import '../../data/models/register_request.dart';
 import 'auth_text_field.dart';
 import 'gradient_button.dart';
+import '../../../../core/utils/extensions.dart';
 
 final class RegisterCard extends ConsumerStatefulWidget {
   const RegisterCard({super.key});
@@ -75,8 +76,8 @@ final class _RegisterCardState extends ConsumerState<RegisterCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              const Text(
-                'Crea tu cuenta',
+              Text(
+                context.l10n.authRegisterTitle,
                 style: TextStyle(
                   color: AppColors.text,
                   fontSize: 19,
@@ -85,8 +86,8 @@ final class _RegisterCardState extends ConsumerState<RegisterCard> {
                 ),
               ),
               const SizedBox(height: 3),
-              const Text(
-                'Empieza a coleccionar sellos y recompensas.',
+              Text(
+                context.l10n.authRegisterSubtitle,
                 style: TextStyle(
                   color: AppColors.textMuted,
                   fontSize: 13,
@@ -96,26 +97,30 @@ final class _RegisterCardState extends ConsumerState<RegisterCard> {
               ),
               const SizedBox(height: 15),
               AuthTextField(
-                label: 'Nombre completo',
+                label: context.l10n.authNameLabel,
                 controller: _nameController,
-                hintText: 'Tu nombre',
+                hintText: context.l10n.authNameHint,
                 prefixIcon: Icons.person_outline_rounded,
                 validator: (String? value) => Validators.required(
                   value,
-                  message: 'Ingresa tu nombre',
+                  message: context.l10n.validationNameShort,
                 ),
                 keyboardType: TextInputType.name,
                 autofillHints: const <String>[AutofillHints.name],
               ),
               const SizedBox(height: 14),
               AuthTextField(
-                label: _usePhone ? 'Celular' : 'Correo o Celular',
+                label: _usePhone
+                    ? context.l10n.authPhoneLabel
+                    : context.l10n.authEmailLabel,
                 controller: _identifierController,
-                hintText: _usePhone ? '+52 55 0000 0000' : 'tu.email@ejemplo.com',
+                hintText: _usePhone
+                    ? context.l10n.authPhoneHint
+                    : context.l10n.authEmailHint,
                 prefixIcon: _usePhone
                     ? Icons.phone_iphone_rounded
                     : Icons.alternate_email_rounded,
-                actionLabel: _usePhone ? 'Usar correo' : 'Usar celular',
+                actionLabel: context.l10n.authVerifyChangeDestination,
                 actionIcon: Icons.swap_horiz_rounded,
                 onAction: () => setState(() => _usePhone = !_usePhone),
                 validator: Validators.emailOrPhone,
@@ -127,9 +132,9 @@ final class _RegisterCardState extends ConsumerState<RegisterCard> {
               ),
               const SizedBox(height: 14),
               AuthTextField(
-                label: 'Contraseña',
+                label: context.l10n.authPasswordLabel,
                 controller: _passwordController,
-                hintText: 'Mínimo 8 caracteres',
+                hintText: context.l10n.authPasswordHint,
                 prefixIcon: Icons.lock_outline_rounded,
                 validator: Validators.password,
                 obscureText: _obscurePassword,
@@ -141,7 +146,7 @@ final class _RegisterCardState extends ConsumerState<RegisterCard> {
               ),
               const SizedBox(height: 16),
               GradientButton(
-                label: 'Registrarme',
+                label: context.l10n.authRegisterAction,
                 isLoading: isLoading,
                 onPressed: _submit,
               ),

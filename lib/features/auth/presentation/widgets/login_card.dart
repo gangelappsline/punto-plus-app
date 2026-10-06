@@ -11,6 +11,7 @@ import '../../data/models/login_request.dart';
 import '../../data/models/password_recovery_request.dart';
 import 'auth_text_field.dart';
 import 'gradient_button.dart';
+import '../../../../core/utils/extensions.dart';
 
 final class LoginCard extends ConsumerStatefulWidget {
   const LoginCard({super.key});
@@ -53,7 +54,7 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
     if (identifierError != null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Ingresa primero tu correo o número celular.'),
+          content: Text(context.l10n.validationEmailOrPhoneInvalid),
         ),
       );
       return;
@@ -70,7 +71,7 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text(
-          'Te enviamos instrucciones para recuperar tu contraseña.',
+          context.l10n.authForgotSuccess,
         ),
       ),
     );
@@ -87,8 +88,8 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              const Text(
-                'Bienvenido de vuelta',
+              Text(
+                context.l10n.authLoginTitle,
                 style: TextStyle(
                   color: AppColors.text,
                   fontSize: 19,
@@ -112,13 +113,17 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
               const SizedBox(height: 15),
               AuthTextField(
                 key: const ValueKey<String>('login-identifier'),
-                label: _usePhone ? 'Celular' : 'Correo o Celular',
+                label: _usePhone
+                    ? context.l10n.authPhoneLabel
+                    : context.l10n.authEmailLabel,
                 controller: _identifierController,
-                hintText: _usePhone ? '+52 55 0000 0000' : 'tu.email@ejemplo.com',
+                hintText: _usePhone
+                    ? context.l10n.authPhoneHint
+                    : context.l10n.authEmailHint,
                 prefixIcon: _usePhone
                     ? Icons.phone_iphone_rounded
                     : Icons.alternate_email_rounded,
-                actionLabel: _usePhone ? 'Usar correo' : 'Usar celular',
+                actionLabel: context.l10n.authVerifyChangeDestination,
                 actionIcon: Icons.swap_horiz_rounded,
                 onAction: () => setState(() => _usePhone = !_usePhone),
                 validator: Validators.emailOrPhone,
@@ -131,11 +136,11 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
               const SizedBox(height: 14),
               AuthTextField(
                 key: const ValueKey<String>('login-password'),
-                label: 'Contraseña',
+                label: context.l10n.authPasswordLabel,
                 controller: _passwordController,
                 hintText: '••••••••••••',
                 prefixIcon: Icons.lock_outline_rounded,
-                actionLabel: '¿Olvidaste?',
+                actionLabel: context.l10n.authForgotAction,
                 onAction: _requestRecovery,
                 validator: Validators.password,
                 obscureText: _obscurePassword,
@@ -148,7 +153,7 @@ final class _LoginCardState extends ConsumerState<LoginCard> {
               const SizedBox(height: 16),
               GradientButton(
                 key: const ValueKey<String>('login-submit'),
-                label: 'Continuar',
+                label: context.l10n.authLoginAction,
                 isLoading: isLoading,
                 onPressed: _submit,
               ),

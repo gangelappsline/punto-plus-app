@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/extensions.dart';
 
 enum AuthMode { login, register }
 
@@ -52,13 +53,13 @@ final class AuthSegmentedControl extends StatelessWidget {
                   children: <Widget>[
                     _Segment(
                       key: const ValueKey<String>('login-tab'),
-                      label: 'Iniciar Sesión',
+                      label: context.l10n.authLoginAction,
                       isSelected: value == AuthMode.login,
                       onTap: () => onChanged(AuthMode.login),
                     ),
                     _Segment(
                       key: const ValueKey<String>('register-tab'),
-                      label: 'Registrarse',
+                      label: context.l10n.authRegisterAction,
                       isSelected: value == AuthMode.register,
                       onTap: () => onChanged(AuthMode.register),
                     ),

@@ -1,0 +1,2 @@
+// Copy to Maps.xcconfig (ignored), restrict by iOS bundle identifier.
+GOOGLE_MAPS_API_KEY =

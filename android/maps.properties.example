@@ -1,0 +1,2 @@
+# Copy to maps.properties (ignored), restrict by package + signing SHA-1.
+GOOGLE_MAPS_API_KEY=

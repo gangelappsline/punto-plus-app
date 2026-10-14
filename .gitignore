@@ -40,3 +40,13 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated with dart run build_runner build
+*.freezed.dart
+*.g.dart
+# Local Google Maps configuration
+android/maps.properties
+ios/Flutter/Maps.xcconfig
+
+# Local validation tools
+.venv/

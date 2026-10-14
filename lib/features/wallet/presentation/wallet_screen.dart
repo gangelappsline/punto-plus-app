@@ -19,9 +19,7 @@ class _WalletScreenState extends ConsumerState<WalletScreen> {
 
   @override
   Widget build(BuildContext context) => RefreshIndicator(
-        onRefresh: () async {
-          await ref.refresh(cardsProvider.future);
-        },
+        onRefresh: () => ref.refresh(cardsProvider.future),
         child: ListView(
             physics: const AlwaysScrollableScrollPhysics(),
             padding: const EdgeInsets.all(24),

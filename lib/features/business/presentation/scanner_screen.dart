@@ -20,7 +20,7 @@ class ScannerScreen extends ConsumerStatefulWidget {
 class _ScannerScreenState extends ConsumerState<ScannerScreen>
     with WidgetsBindingObserver {
   final _controller =
-      MobileScannerController(autoStart: false, formats: [BarcodeFormat.qr]);
+      MobileScannerController(autoStart: false, formats: [BarcodeFormat.qrCode]);
   final _manual = TextEditingController();
   bool _camera = false;
   bool _handling = false;

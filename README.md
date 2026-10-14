@@ -12,7 +12,7 @@ Arquitectura feature-first, Material 3, Riverpod y modelos Freezed.
 
 Requisitos: Flutter **3.27.4** / Dart **3.6.2** (versión fijada en CI), JDK 17,
 Android SDK 35; para iOS, macOS + Xcode + CocoaPods. Android mínimo API 23,
-iOS mínimo 15. Se usan dependencias directas fijadas para esa base.
+iOS mínimo 15.5 (requerido por mobile_scanner 6). Se usan dependencias directas fijadas para esa base.
 
 ```bash
 # Descarga dependencias, genera modelos, formatea, analiza y ejecuta pruebas.
@@ -35,7 +35,9 @@ de abrir el proyecto en el analizador o compilar**. No se escriben a mano. El
 `pubspec.lock` anterior correspondía a la plantilla del contador y fue retirado;
 después del primer `flutter pub get` exitoso, versiona el nuevo lockfile para
 fijar también las dependencias transitivas. No hay SDK Flutter en el entorno
-que generó este código; resolución de dependencias y compilación quedan por validar.
+que generó este código; la resolución de dependencias y las compilaciones se validan en CI. Consulta
+las [comprobaciones del PR #3](https://github.com/gangelappsline/punto-plus-app/pull/3/checks)
+para ver sus resultados actuales.
 
 ## Recorrido demo
 

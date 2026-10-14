@@ -12,8 +12,9 @@
 a pub.dev ni al host de la API desde este entorno. Por tanto, **no se ejecutaron**
 resolución pub, codegen, `flutter analyze`, `flutter test`, builds ni pruebas en
 emulador. Los checks sintácticos no prueban tipos, compatibilidad de plugins,
-resolución de dependencias o comportamiento móvil. CI está configurado, no se
-presenta como una ejecución ya aprobada.
+resolución de dependencias o comportamiento móvil. Este apartado describe la validación local inicial. Los resultados posteriores
+de CI se consultan en las [comprobaciones del PR #3](https://github.com/gangelappsline/punto-plus-app/pull/3/checks);
+no deben confundirse con pruebas en dispositivos físicos.
 
 ## Suites incluidas para Flutter
 

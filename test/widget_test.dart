@@ -55,5 +55,11 @@ void main() {
     expect(find.text('Activar cámara'), findsOneWidget);
     expect(find.text('Probar con el cliente demo'), findsOneWidget);
     expect(tester.takeException(), isNull);
+
+    // Keep the scanner header usable on compact phones too.
+    tester.view.physicalSize = const Size(320, 932);
+    await tester.pumpAndSettle();
+    expect(find.text('Registrar visita'), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 }

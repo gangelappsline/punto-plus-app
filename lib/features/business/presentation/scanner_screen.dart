@@ -124,7 +124,7 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen>
             onPressed: () => context.go('/business'),
             tooltip: 'Volver al negocio',
             icon: const Icon(Icons.arrow_back_rounded)),
-        Text('Registrar visita', style: Theme.of(context).textTheme.titleLarge),
+        Expanded(child: Text('Registrar visita', style: Theme.of(context).textTheme.titleLarge)),
       ]),
       const SizedBox(height: 24),
       if (_success) ...[
